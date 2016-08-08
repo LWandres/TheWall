@@ -3,8 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 
-var server = app.listen(8000, function() {
-    console.log("listening on port 8000");
+var server = app.listen(3000, function() {
+    console.log("listening on port 3000");
 });
 app.use(express.static(path.join(__dirname, './client')));
 app.use(bodyParser.urlencoded({
