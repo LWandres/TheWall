@@ -18,7 +18,7 @@ body{
 }
 
 h2{
-    font-size:5em;
+    font-size:4em;
     font-weight:900;
     color:black;
 }
@@ -93,6 +93,11 @@ body{
   margin-left:29%;
   width:30%;
 }
+
+#addnew > form > div:nth-child(3) > textarea{
+    overflow: scroll;
+    resize: none;
+}
 #dashboard h3{
   display:inline-block;
   width:40%;
@@ -160,6 +165,7 @@ body{
   margin-left: 10%;
   display: block;
   overflow:scroll;
+  resize: none;
 }
 hr{
   color:silver;
@@ -186,6 +192,7 @@ hr{
 
 .comments{
     margin-left:10%;
+    margin-bottom:2%;
     background:whitesmoke;
     padding:2%;
 }
@@ -198,10 +205,6 @@ hr{
     margin:1% !important;
 }
 
-#commentbox{
-    display: none;
-}
-
 #commentlink{
     float:right;
 }
@@ -209,6 +212,9 @@ hr{
     display: block;
 }
 
+.hide{
+    display:none;
+}
 /*User profile page*/
 #userprofile{
     height:900px;

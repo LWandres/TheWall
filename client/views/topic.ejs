@@ -31,7 +31,7 @@
 					<p id="date" ng-bind="post.created_at | date: 'MMMM, dd, yyyy - h:mm a'"></p>
 					<hr id="posts">
 					<p ng-bind="post.post"></p>
-					<a id="commentlink" href="" ng-click="showcomments()">Add a Comment</a>
+					<a id="commentlink" href="" ng-click="showcomments(post._id)">Add a Comment</a>
 				</div><br>
 
 				<div class="comments" ng-if="post.comments.length > 0">
@@ -45,7 +45,7 @@
 				</div>
 
 				<!-- toggles in an out with the "Add a Comment" link -->
-				<div id="commentbox" ng-if="post">
+				<div id="commentbox_{{post._id}}" class="hide" ng-if="post">
 					<div class="row form-group">
 						<label style="margin-left: 40px" class="col-md-2 control-label">Post a comment:</label>
 						<textarea style="margin-left: 40px" class="col-md-2" rows="6" ng-model="newComment.comment"></textarea><br>

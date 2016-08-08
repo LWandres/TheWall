@@ -34,7 +34,7 @@ app.controller('topicController', function($scope, $routeParams, topicFactory, p
 		})
 	}
 
-	//create a new comment on a post 
+	//create a new comment on a post
 	$scope.createComment = function(newComment, post, name) {
 		postFactory.createComment(newComment, post, name, function(info) {
 			$scope.posts = info;
@@ -42,16 +42,15 @@ app.controller('topicController', function($scope, $routeParams, topicFactory, p
 	}
 
 	//toggle function for add comment box
-	$scope.showcomments = function(){
-		var state = $(this).data('state');
-		state = !state;
+	$scope.showcomments = function(post_id){
+		var state = $("#commentbox_"+post_id).hasClass('hide');
 
-		if (state){
-			$("#commentbox").addClass('show');
-	 	}
-		else{
-			$("#commentbox").removeClass('show');
+		if (state == true){
+			$("#commentbox_"+post_id).removeClass('hide')
+			$("#commentbox_"+post_id).addClass('show');
+	 	}else{
+			$("#commentbox_"+post_id).removeClass('show');
+			$("#commentbox_"+post_id).addClass('hide');
 		}
-		$(this).data('state', state);
 	}
 })
