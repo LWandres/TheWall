@@ -5,4 +5,4 @@ Technologies: HTML5/CSS3, Express.js, Node.js, MongoDB, Mongoose
 
 Involvement: Individual Project - Full Stack Web Developer
 
-<img src="/static/images/TheWall.png" alt="TheWall.png">
+<img src="/client/static/images/TheWall.png" alt="TheWall.png">
