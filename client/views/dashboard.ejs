@@ -26,13 +26,18 @@
 				<tbody>
 					<tr ng-repeat="topic in topics | filter: query">
 						<td ng-bind="topic.category"></td>
-						<td><a ng-bind="topic.title" href="#/topic/{{topic._id}}"></a></td>
-						<td><a ng-bind="topic.name" ng-href="#/user/{{topic.user_id}}"></a></td>
+						<td>
+							<a ng-bind="topic.title" href="#/topic/{{topic._id}}"></a>
+						</td>
+						<td>
+							<a ng-bind="topic.name" ng-href="#/user/{{topic.user_id}}"></a>
+						</td>
 						<td ng-bind="topic.posts"></td>
 					</tr>
 				</tbody>
 			</table>
-		</div> <!--End Topic Table -->
+		</div>
+		<!--End Topic Table -->
 
 		<div id="addnew" class="split">
 			<form class="form-horizontal" role="form">
@@ -82,7 +87,8 @@
 				<div class="form-group">
 					<button class="btn btn-success col-md-1 col-md-offset-5" ng-click="createTopic(newTopic, user)">POST TOPIC</button>
 				</div>
-			</form>
-		</div> <!--end of add new topic div -->
-	</div>
-</div>
+
+			</form><!--end of add new form-->
+		</div><!--end of add new topic div -->
+	</div><!--end of row main div -->
+</div><!--end of dashboard div -->
